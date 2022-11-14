@@ -11,12 +11,12 @@
         <content type="html"><![CDATA[<h4 id="1-需要准备的软件"><a href="#1-需要准备的软件" class="headerlink" title="1.需要准备的软件:"></a>1.需要准备的软件:</h4><p><code>AirtestIDE</code>、<code>模拟器（Mumu）</code>以及一定的<code>Python</code>语言基础</p><h4 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2.步骤"></a>2.步骤</h4><p>待施工…</p>]]></content>
       
       
-      <categories>
-          
-          <category> Airtest自动化 </category>
-          
-      </categories>
       
+        <tags>
+            
+            <tag> Airtest自动化 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -30,12 +30,12 @@
         <content type="html"><![CDATA[<h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>先是出现错误</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">error：spawn failed...</span><br></pre></td></tr></table></figure><p>经过一些博客有关的操作会出现以下问题</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal: cannot lock ref <span class="string">&#x27;HEAD&#x27;</span>: unable to resolve reference HEAD: Invalid argument error: src refspec</span><br></pre></td></tr></table></figure><p>下面的代码是我自己 <code>hexo d</code> 上传到 <code>Github</code> 之后出现的报错</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (D:\Program Files\blog\node_modules\hexo-util\lib\spawn.js:<span class="number">51</span>:<span class="number">21</span>)</span><br><span class="line">      at ChildProcess.emit (node:events:<span class="number">526</span>:<span class="number">28</span>)</span><br><span class="line">      at ChildProcess.cp.emit (D:\Program Files\blog\node_modules\cross-spawn\lib\enoent.js:<span class="number">34</span>:<span class="number">29</span>)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal/child_process:<span class="number">291</span>:<span class="number">12</span>) &#123;</span><br><span class="line">    code: <span class="number">128</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something<span class="string">&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span></span><br></pre></td></tr></table></figure><h4 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//问题大多是因为git进行push或者hexo d的时候改变了一些.deploy_git文件下的内容。</span></span><br></pre></td></tr></table></figure><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>1.进入 <code>hexo</code> 根目录</p><p>2.把<code>.deploy_git</code>和<code>public</code>两个文件夹删除</p><p>3.在终端依次执行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>]]></content>
       
       
-      <categories>
-          
-          <category> Hexo </category>
-          
-      </categories>
       
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -62,12 +62,12 @@
         <content type="html"><![CDATA[<h4 id="详见：Butterfly添加全局吸底Aplayer教程-Butterfly"><a href="#详见：Butterfly添加全局吸底Aplayer教程-Butterfly" class="headerlink" title="详见：Butterfly添加全局吸底Aplayer教程 | Butterfly"></a>详见：<a href="https://butterfly.js.org/posts/507c070f/">Butterfly添加全局吸底Aplayer教程 | Butterfly</a></h4><h4 id="1-在博客的目录下打开终端-Git-，运行如下指令"><a href="#1-在博客的目录下打开终端-Git-，运行如下指令" class="headerlink" title="1.在博客的目录下打开终端(Git)，运行如下指令"></a>1.在博客的目录下打开终端(Git)，运行如下指令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-aplayer --save</span><br></pre></td></tr></table></figure><h4 id="2-在网站配置文件-config-yml-中修改-aplayer-配置项为："><a href="#2-在网站配置文件-config-yml-中修改-aplayer-配置项为：" class="headerlink" title="2.在网站配置文件_config.yml 中修改 aplayer 配置项为："></a>2.在网站配置文件<code>_config.yml</code> 中修改 <code>aplayer</code> 配置项为：</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 音乐插件</span></span><br><span class="line"><span class="attr">aplayer:</span> </span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">asset_inject:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><h4 id="3-在主题配置文件-config-butterfly-yml中修改-aplayerInject-配置项为："><a href="#3-在主题配置文件-config-butterfly-yml中修改-aplayerInject-配置项为：" class="headerlink" title="3.在主题配置文件_config.butterfly.yml中修改 aplayerInject 配置项为："></a>3.在主题配置文件<code>_config.butterfly.yml</code>中修改 <code>aplayerInject</code> 配置项为：</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Inject the css and script (aplayer/meting)</span></span><br><span class="line"><span class="attr">aplayerInject:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><h4 id="4-把-aplayer代码-插入到主题配置文件的-inject-bottom-去"><a href="#4-把-aplayer代码-插入到主题配置文件的-inject-bottom-去" class="headerlink" title="4.把 aplayer代码 插入到主题配置文件的 inject.bottom 去"></a>4.把 aplayer代码 插入到主题配置文件的 <code>inject.bottom</code> 去</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;aplayer no-destroy&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">class</span>=<span class="string">&quot;aplayer aplayer-tag-marker meting-tag-marker&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-id</span>=<span class="string">&quot;7739356731&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-server</span>=<span class="string">&quot;netease&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-type</span>=<span class="string">&quot;playlist&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-mode</span>=<span class="string">&quot;random&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-autoplay</span>=<span class="string">&quot;false&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-listmaxheight</span>=<span class="string">&quot;340px&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-preload</span>=<span class="string">&quot;auto&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-theme</span>=<span class="string">&quot;#e3f2f5&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">data-volume</span>=<span class="string">&quot;0.4&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">mutex</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure><p>其中 <code>data-id</code> 为歌单ID，可以换做自己喜欢的歌曲，获取歌单ID的方式为：复制歌单的链接到浏览器，id后面就是歌单id</p><p><code>data-server</code>：<code>netease</code>代表网易云音乐</p><p>配置全局吸底，<code>data-fixed</code> 和 <code>data-mini</code> 也必须配置，配置为 <code>true</code></p><p>如果使用 <code>Pjax</code>，则在 <code>class</code> 里需添加 <code>no-destroy</code>，这样防止切换页面时 Aplayer 被销毁</p><p>最后，如果你想切换页面时，音乐不会中断。请把主题配置文件的 <code>pjax</code> 设为 <code>true</code></p>]]></content>
       
       
-      <categories>
-          
-          <category> Hexo </category>
-          
-      </categories>
       
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
       
     </entry>
     

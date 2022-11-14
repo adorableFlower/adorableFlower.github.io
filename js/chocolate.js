@@ -1,4 +1,9 @@
+// TODO 获取窗口高度  11-19
+var b_h = $(window).height()
+var b_w = $(window).width()
+
 $(function() {
+
     // 气泡
     function bubble() {
         $('#page-header').circleMagic({
@@ -16,7 +21,17 @@ $(function() {
 
             function c() { e = !(document.body.scrollTop > a) }
 
-            function s() { o = l.clientWidth, a = l.clientHeight, l.height = a "px", n.width = o, n.height = a }
+            function s() {
+                // TODO 获取窗口高度  ethan_tzy
+                var a_c = l.clientHeight
+                if ($('#index-video').length > 0 && b_w > 768) {
+                    a = b_h * 0.8
+                } else {
+                    a = a_c
+                }
+                // o = l.clientWidth, a = l.clientHeight, l.height = a + "px", n.width = o, n.height = a
+                o = l.clientWidth, l.height = a + "px", n.width = o, n.height = a
+            }
 
             function h() {
                 if (e)
@@ -27,10 +42,18 @@ $(function() {
             function f() {
                 var t = this;
 
-                function e() { t.pos.x = Math.random() * o, t.pos.y = a 100 * Math.random(), t.alpha = .1 Math.random() * d.clearOffset, t.scale = .1 .3 * Math.random(), t.speed = Math.random(), "random" === d.color ? t.color = "rgba(" Math.floor(255 * Math.random()) ", " Math.floor(0 * Math.random()) ", " Math.floor(0 * Math.random()) ", " Math.random().toPrecision(2) ")" : t.color = d.color }
+                function e() { t.pos.x = Math.random() * o, t.pos.y = a + 100 * Math.random(), t.alpha = .1 + Math.random() * d.clearOffset, t.scale = .1 + .3 * Math.random(), t.speed = Math.random(), "random" === d.color ? t.color = "rgba(" + Math.floor(255 * Math.random()) + ", " + Math.floor(0 * Math.random()) + ", " + Math.floor(0 * Math.random()) + ", " + Math.random().toPrecision(2) + ")" : t.color = d.color }
                 t.pos = {}, e(), this.draw = function() { t.alpha <= 0 && e(), t.pos.y -= t.speed, t.alpha -= 5e-4, r.beginPath(), r.arc(t.pos.x, t.pos.y, t.scale * d.radius, 0, 2 * Math.PI, !1), r.fillStyle = t.color, r.fill(), r.closePath() }
             }! function() {
-                o = l.offsetWidth, a = l.offsetHeight,
+                // TODO 气泡的高度  11-19
+                var a_c = l.clientHeight
+                if ($('#index-video').length > 0 && b_w > 768) {
+                    a = b_h * 0.8
+                } else {
+                    a = a_c
+                }
+                o = l.offsetWidth,
+                    // o = l.offsetWidth, a = l.offsetHeight,
                     function() {
                         var t = document.createElement("canvas");
                         t.id = "canvas", t.style.top = 0, t.style.zIndex = 0, t.style.position = "absolute", l.appendChild(t), t.parentElement.style.overflow = "hidden"
@@ -43,7 +66,5 @@ $(function() {
             }(), window.addEventListener("scroll", c, !1), window.addEventListener("resize", s, !1)
         }
     }(jQuery);
-
-    // 调用气泡方法
     bubble();
 })
